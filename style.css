@@ -122,27 +122,28 @@ section{
     transform: scale(1.05);
 }
 
-.curriculo{
+.btn-curriculo{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.projects.btn{
+.curriculo.btn{
     background-color: #121212;
     border: 2px solid #fff;
     transition: 0.3s;
 }
 
-.projects{
+.curriculo{
     font-size: 16px;
     font-weight: 700;
     width: 300px;
 }
 
-.projects:hover{
+.curriculo:hover{
     background-color: #fff;
     color: #000000;
+    
 }
 
 .tecnologias{
