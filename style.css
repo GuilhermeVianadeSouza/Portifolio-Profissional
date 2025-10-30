@@ -8,6 +8,38 @@ body{
     background-color: red;
 }
 
+.cabecario{
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    align-items: center;
+}
+
+menu{
+    display: flex;
+    color: #fff;
+    gap: 8px;
+}
+
+.cabecario h1{
+    color: #E62020;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff
+}
+
+li:hover{
+    background-color: #ff6a6aef;
+    border: 1px solid #8B0000;
+}
+
 .projeto-1{
     background-color: aquamarine;
 }
