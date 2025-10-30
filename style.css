@@ -4,10 +4,18 @@
     box-sizing: border-box;
 }
 
+:root{
+    --text-color: #fff;
+    --text-secundary: #a0a0a0;
+    --bg-color: #121212;
+    --bg-secundary: #313131;
+    --default-shadow: #E62020;
+}
+
 body{
     height: 100dvh;
     width: 100dvw;
-    background-color: #121212;
+    background-color: var(--bg-color);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -56,6 +64,7 @@ section{
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 20px;
 }
 
 .home{
@@ -65,6 +74,7 @@ section{
     flex-direction: column;
     align-items: center;
     padding-block: 16px;
+    gap: 8px;
 }
 
 .perfil{
@@ -74,20 +84,23 @@ section{
 }
 
 .info{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 80%;
     align-items: center;
     padding-block: 20px;
+    gap: 12px;
 }
 
 .info h2{
     font-size: 20px;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .info p{
     font-size: 16px;
-    color: #fff;
+    color: var(--text-secundary);
 }
 
 .buttons{
@@ -114,11 +127,12 @@ section{
 
 .linkedin a{
     font-size: 24px;
-    color: #fff;
+    color: var(--text-color);
+    font-weight: 700;
 }
 
 .linkedin:hover{
-    box-shadow: 0 0 20px #E62020;
+    box-shadow: 0 0 20px var(--default-shadow);
     transform: scale(1.05);
 }
 
@@ -129,7 +143,7 @@ section{
 }
 
 .curriculo.btn{
-    background-color: #121212;
+    background-color: var(--bg-color);
     border: 2px solid #fff;
     transition: 0.3s;
 }
@@ -141,19 +155,23 @@ section{
 }
 
 .curriculo:hover{
-    background-color: #fff;
+    background-color: var(--text-color);
     color: #000000;
     
 }
 
 .tecnologias{
     margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .tecnologias p{
-    color: #fff;
+    color: var(--text-secundary);
     font-size: 24px;
     margin-bottom: 1rem;
+    
 }
 
 .tecnologias-dominadas{
@@ -179,6 +197,7 @@ section{
     display: flex;
     gap: 16px;
     justify-content: center;
+    text-align: center;
 }
 
 .ferramentas img{
@@ -195,6 +214,62 @@ section{
     transform: scale(1.3);
 }
 
-.projeto-1{
-    background-color: aquamarine;
+.project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 32px;
+    margin-bottom: 12px;
+    background-color: var(--bg-secundary);
+}
+
+.project h3{
+    font-size: 24px;
+    padding-bottom: 16px;
+    color: var(--text-color);
+}
+
+.galeria-projeto{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.card{
+    display: block;
+    background-color: var(--bg-color);
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 6.5px 10px rgb(0, 0, 0.3);
+    border-radius: 8px;
+    transition: transform 0.3s ease , box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6.5px 10px rgb(0, 0, 0.3)
+}
+
+.card img{
+    width: 100%;
+    height: 250px;
+}
+
+.projeto-info{
+    text-align: start;
+    padding-inline: 20px;
+    gap: 8px;
+    padding-block: 8px;
+}
+
+.projeto-info h4{
+    font-size: 20px;
+}
+
+.projeto-info p{
+    color: var(--default-shadow);
+    font-size: 16px;
 }
